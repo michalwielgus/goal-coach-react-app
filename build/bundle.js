@@ -19328,13 +19328,11 @@ var store = (0, _redux.createStore)(_reducers2.default);
 
 _firebase.firebaseApp.auth().onAuthStateChanged(function (user) {
     if (user) {
-        console.log('user has signed in, or up', user);
         var email = user.email;
 
         store.dispatch((0, _actions.logUser)(email));
         _reactRouter.browserHistory.push('/app');
     } else {
-        console.log('user signed out, or still not signed in');
         _reactRouter.browserHistory.replace('/signin');
     }
 });
@@ -54201,7 +54199,6 @@ var App = function (_Component) {
 }(_react.Component);
 
 function mapStateToProps(state) {
-    console.log('state', state);
     return {};
 }
 exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(App);
@@ -54252,7 +54249,6 @@ var AddGoal = function (_Component) {
     _createClass(AddGoal, [{
         key: 'addGoal',
         value: function addGoal() {
-            console.log('Add: ' + this.state.title);
             var title = this.state.title;
             var email = this.props.user.email;
 
@@ -54371,7 +54367,6 @@ var GoalList = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            console.log('this.props.goalsssss: ', this.props.goals);
             return _react2.default.createElement(
                 'div',
                 null,
@@ -54549,7 +54544,6 @@ var SignIn = function (_Component) {
             var _this2 = this;
 
             _firebase.firebaseApp.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch(function (error) {
-                console.log(error);
                 _this2.setState({ error: error });
             });
         }
@@ -54558,7 +54552,6 @@ var SignIn = function (_Component) {
         value: function render() {
             var _this3 = this;
 
-            console.log(this.state);
             return _react2.default.createElement(
                 'div',
                 { className: 'signup' },
@@ -54674,7 +54667,6 @@ var SignUp = function (_Component) {
         value: function render() {
             var _this3 = this;
 
-            console.log(this.state);
             return _react2.default.createElement(
                 'div',
                 { className: 'signup' },
