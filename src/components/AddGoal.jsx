@@ -12,7 +12,6 @@ class AddGoal extends Component {
     }
 
     addGoal() {
-        console.log (`Add: ${this.state.title}`);
         const { title } = this.state;
         const { email } = this.props.user;
         goalRef.push({ email, title });

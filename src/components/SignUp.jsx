@@ -24,7 +24,6 @@ class SignUp extends Component {
     }
     
     render() {
-        console.log(this.state);
         return(
             <div className="signup">
                 <div className="input-group">

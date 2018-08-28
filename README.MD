@@ -1,3 +1,3 @@
-# React Starter Kit
+# GoalCoach React APP
 
-This repository contains basic configuration of webpack, directories hierarchy and some files to quick starting new react app. Just clone it, run ```npm install``` and start coding.
+Application has been created with [this](https://www.udemy.com/react-js-and-redux-mastering-web-apps/learn/v4/content) tutorial. See [a live demo](https://webwarriors.pl/michalwielgus/react/goal-coach-react-app).

@@ -6,7 +6,6 @@ import GoalItem from './GoalItem.jsx';
 
 class CompleteGoalsList extends Component {
 
-
     componentDidMount() {
         completeGoalRef.on('value', snap => {
             let completeGoals = [];
